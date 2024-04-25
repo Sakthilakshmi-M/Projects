@@ -1,0 +1,16 @@
+:root {
+  --a:#B5C99A;
+  --b:#482121;
+  --c:#862B0D;
+  --d:#FFC95F;
+  --e:#FFF9C9;
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  box-sizing: border-box;
+}
+

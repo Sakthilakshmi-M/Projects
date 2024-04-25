@@ -1,0 +1,87 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+  padding: 5px;
+  height: 13vh;
+}
+
+header img {
+  margin-left: 10px;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li .link {
+  color: var(--b);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+header nav ul li::after {
+  content: '';
+  display: block;
+  background-color: var(--d);
+  height: 3px;
+  transform: scaleX(0);
+  transition: transform 300ms;
+}
+
+nav ul li:hover::after {
+  transform: scaleX(1);
+}
+
+.link:hover {
+  color: var(--c);
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+}
+
+.mobile-ul {
+  position: absolute;
+  right: 0%;
+  border: 2px solid black;
+  padding: 13px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px;
+  margin-right: 20px;
+  background-color: var(--e);
+  z-index: 1;
+}
+
+.mobile-ul ul li .link {
+  color: var(--b);
+  font-weight: 600;
+}
+
+.mobile-ul ul li .link:hover {
+  color: var(--c);
+}
+
+.mobile-ul ul li {
+  margin: 7px;
+}
+
+@media screen and (max-width:930px) {
+  header nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    margin-right: 10px;
+    cursor: pointer;
+    color: var(--b);
+  }
+}

@@ -1,0 +1,82 @@
+label,input {
+  display: block;
+}
+
+.form-container {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+.form-container .booknowform {
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+  padding: 50px;
+  background-color: var(--e);
+}
+
+.booknowform .input-group {
+  margin: 12px;
+}
+
+.booknowform input, .booknowform select {
+  width: 100%;
+  margin: 5px 0px;
+  padding: 5px;
+  border: 2px solid var(--b);
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+.booknowform label {
+  font-size: 1.3rem;
+  color: var(--b);
+}
+
+.booknowform h1 {
+  margin-bottom: 20px;
+  color: var(--b);
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 1.5rem;
+  text-align: center;
+  padding:10px 0px;
+}
+
+.booknowform h1 span {
+  color: rgba(219, 12, 12, 0.898);
+  font-size: 2rem;
+  font-style: normal;
+  padding:10px 0px;
+}
+
+.submit {
+  margin-top: 20px;
+  background-color: var(--b);
+  color: var(--d);
+  letter-spacing: 2px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: var(--c);
+  color: var(--d);
+}
+
+@media screen and (max-width:700px) {
+  .form-container .booknowform {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width:550px) {
+  .form-container .booknowform {
+    padding: 20px;
+  }
+}
+
+.form-error {
+  color: rgba(219, 12, 12, 0.898);
+}

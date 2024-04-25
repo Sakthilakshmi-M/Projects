@@ -1,0 +1,11 @@
+.title {
+  text-align: center;
+  margin: 50px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: var(--b);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}

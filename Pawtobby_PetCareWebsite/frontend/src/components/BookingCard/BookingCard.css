@@ -1,0 +1,11 @@
+.booking-card {
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+  margin: 30px;
+  padding: 20px;
+  background-color: var(--d);
+}
+
+.booking-card p {
+  margin: 10px;
+  font-size: 1.2rem;
+}

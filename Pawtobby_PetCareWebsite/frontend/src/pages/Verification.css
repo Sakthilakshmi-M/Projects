@@ -1,0 +1,13 @@
+.verification {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: var(--a);
+  font-size: 1.3rem;
+  color: var(--b);
+}
