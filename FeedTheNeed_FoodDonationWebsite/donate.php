@@ -310,7 +310,7 @@ if($insertTest) {
            $mail->Host       = 'smtp.gmail.com';                     
            $mail->SMTPAuth   = true;                                  
           $mail->Username   = 'donorftn@gmail.com';                     
-          $mail->Password   = 'qsjaernjghqpzbho';                             
+          $mail->Password   = '';                             
           $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;           
             $mail->Port       = 465;       
 
