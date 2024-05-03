@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Advanced QA Services</title>
+      <link rel="icon" href="images/logo.png" sizes="16x16">
+      <link rel="stylesheet" href="style.css">
+      <script src="https://kit.fontawesome.com/c71ec816f8.js" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+    </head>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <div class="flex1">
+      <img src="images/logo.png" alt="">
+      <span data-text="AQAS&nbsp;PVT&nbsp;LTD">AQAS&nbsp;PVT&nbsp;LTD</span>
+    </div>
+    <nav class="flex2">
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <span class="hamburger flex3" id="hamburgerButton">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <span><i class="fa-solid fa-xmark fa-2x close"></i></span>
+  </header>
+  <div id="wrapper">
+    <div id="scroll-text">
+      <pre>||   We are AERB and NABH authorised service providers for Quality Assurance and Equipment Service   ||</pre>
+    </div>
+  </div>
+  <section class="container" id="contactus">
+    <h2 class="sub-heading">CONTACT US</h2>
+    <div class="contact-container">
+      <img src="images/mailus.png" alt="Contact Picture">
+      <div class="form">
+        <form action="" class="userForm">
+          <div class="input-group">
+            <input type="text" id="iname" name="iname" placeholder="Institution Name" required autocomplete="off">
+          </div>
+          <div class="input-group">
+            <input type="text" id="name" name="name" placeholder="Name" required autocomplete="off">
+          </div>
+          <div class="input-group">
+            <input type="text" id="email" name="email" placeholder="Email" required autocomplete="off">
+          </div>
+          <div class="input-group">
+            <input type="text" id="phone" name="phone" placeholder="Mobile Number" required autocomplete="off" oninvalid="this.setCustomValidity('Please enter a 10 digit mobile number')">
+          </div>
+          <div class="input-group">
+            <input type="text" name="address" placeholder="Address" required autocomplete="off">
+          </div>
+          <div class="input-group">
+            <textarea type="text" placeholder="Message" required autocomplete="off" name="msg"></textarea>
+          </div>
+          <div class="input-group">
+            <select name="service" id="service" required>
+              <option value="" disabled selected>Select a service:</option>
+              <option value="Quality Assurance (Both periodic & Event based)">Quality Assurance</option>
+              <option value="Equipment Servicing for all type of diagnostic equipments">Equipment Service</option>
+              <option value="Consultation and Guidance for obtaining AERB Licence">Consultation for AERB</option>
+              <option value="Shield evolution of radiological device installations">Shield Evolution</option>
+              <option value="Acceptance Test during Commissioning">Acceptance Test</option>
+              <option value="Radiation Survey of X ray installations">Radiation Survey</option>
+              <option value="Perfomance Evaluation test of all the X-ray Installations.">Perfomance evaluation for old/new x-ray installations</option>
+              <option value="Others">Others</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <input type="text" name="other" id="other" placeholder="Enter the service you need:  " autocomplete="off">
+          </div>
+          <input type="submit" value="Send" class="btn" id="btn" required autocomplete="off">
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer">
+      <div class="col1">
+        <h2>AQAS (OPC) PVT LTD</h2>
+          <p>
+            <a href="index.html">Home</a><span> | </span>
+            <a href="aboutus.html">About Us</a><span> | </span>
+            <a href="services.html">Services</a><span> | </span>
+            <a href="contactus.html">Contact Us</a>
+          </p>
+          <p><i class="fa-solid fa-copyright" id="fa"></i> Copyright reserved</p>
+      </div>
+      <div class="col2">
+        <div>
+          <h4>Contact Us:</h4><br>
+          <i class="fa-solid fa-location-dot" id="fa"></i>
+          <span>Tamil Nadu
+          </span>
+        </div>
+        <div>
+          <i class="fa-solid fa-phone" id="fa"></i>
+          <span>9444835829</span>
+        </div>
+        <div>
+          <i class="fa-solid fa-envelope" id="fa"></i>
+          <span>office@aqas.in</span>
+        </div>
+        <div>
+          <i class="fa-solid fa-envelope" id="fa"></i>
+          <span>advancedqaservices@gmail.com</span>
+        </div>
+      </div>
+      <div class="col3">
+        <h4>ABOUT THE COMPANY</h4><br>
+        <p>We are AERB authorized service providers for quality assurance and equipment services for diagnostic radiological equipments.</p>
+        <i class="fa-brands fa-facebook" id="fa"></i>
+        <i class="fa-brands fa-square-instagram" id="fa"></i>
+        <i class="fa-brands fa-twitter" id="fa"></i>
+        <i class="fa-brands fa-linkedin"id="fa"></i>
+      </div>
+    </div>
+  </footer>
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+  <script src="form.js">
+
+  </script>
+  <script>
+  </script>
+  <script>
+let other = document.getElementById('other');
+other.style.display = "none";
+
+const urlParams = new URLSearchParams(window.location.search);
+const selectedService = urlParams.get('service');
+const selectElement = document.getElementById('service');
+
+if (selectedService) {
+  selectElement.value = selectedService;
+
+  if (selectedService === 'Modification of Radiological Equipments as per the regulations') {
+    selectElement.value = 'Others';
+    other.style.display = "block";
+  } else {
+    other.style.display = "none";
+  }
+
+  if (selectedService === "Radiological Safety Consultation") {
+    selectElement.value = 'Others';
+    other.style.display = "block";
+  } else {
+    other.style.display = "none";
+  }
+
+}
+
+selectElement.addEventListener('change', () => {
+  if (selectElement.value === 'Others') {
+    other.style.display = "block";
+  } else {
+    other.style.display = "none";
+  }
+});
+
+  </script>
+  <script>
+     document.addEventListener("DOMContentLoaded",function() {
+  const navbar = document.querySelector(".nav");
+const hamburger = document.querySelector(".hamburger");
+const close = document.querySelector(".close");
+close.style.display = "none";
+
+hamburger.addEventListener('click',()=>{
+  navbar.classList.toggle("func");
+  hamburger.style.display = "none";
+  close.style.display = "block";
+})
+
+close.addEventListener('click',()=>{
+  close.style.display = "none";
+  hamburger.style.display = "block";
+  navbar.classList.remove("func");
+})
+
+ });
+  </script>
+</body>
+</html>

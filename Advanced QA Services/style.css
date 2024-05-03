@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;}
+
+:root {
+  --blue: #213363;
+}
+/* Header*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  /* background-color: #8EAC50; */
+}
+
+header>div
+{
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+header div img {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  margin-left: 20px;
+}
+
+header div span {
+  margin-left: 20px;
+  font-size: 35px;
+  position: relative;
+  color: #252839;
+  -webkit-text-stroke: 0.2vw #383d52;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+header div span::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #88bb3d;
+  -webkit-text-stroke: 0vw #383d52;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+  0%,10%,100%
+  {
+    width : 0;
+  }
+  70% ,90%
+  {
+    width: 100%;
+  }
+}
+
+nav {
+  width: 60%;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li {
+  font-size: large;
+  font-weight: 550;
+}
+
+nav ul li a {
+  color: #070A52;
+}
+
+nav ul li::after {
+  content: '';
+  display: block;
+  background-color: #88bb3d/*#8fc04e*/;
+  height: 3px;
+  transform: scaleX(0);
+  transition: transform 300ms;
+}
+
+nav ul li:hover::after {
+  transform: scaleX(1);
+}
+
+.landing {
+  background: linear-gradient(rgb(0,0,0,0.6),rgb(0,0,0,0.7)), url("images/x-ray.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}
+
+.name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 10px;
+
+  letter-spacing: 1px;
+}
+
+.name>h1 {
+  line-height: 1.75em;
+  margin-bottom: 10px;
+  color:  #88bb3d;
+}
+.name>span {
+  line-height: 1.2em;
+  color: #88bb3d;
+}
+
+@media screen and (max-width:900px) {
+  nav ul li {
+    font-size: medium;
+  }
+}
+
+@media screen and (max-width: 740px) {
+
+}
